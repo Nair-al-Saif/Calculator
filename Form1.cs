@@ -73,12 +73,18 @@ namespace Calculator
             }
         }
         // вычисление факториала
-        public int calcFactorial(int inputInt)
+        private string calcFactorial(int inputInt)
         {
-            int factorial = 1;
-            for (int i = 1; i <= inputInt; i++)
+            ulong factorial = 1;
+            for (uint i = 1; i <= inputInt; i++)
+            {
                 factorial *= i;
-            return factorial;
+                if (factorial > long.MaxValue)
+                {
+                    return "Too much";
+                }
+            }
+            return factorial.ToString();
         }
         // вычисления через равно
         private void equal(string clearType = "past")
@@ -249,16 +255,20 @@ namespace Calculator
         // корень квадратный
         private void btnSQRT_Click(object sender, EventArgs e)
         {
-            if (btnSQRT.Text == "√")
+            if (double.Parse(lblResult.Text) >= 0)
             {
-                lblPast.Text = "√" + lblResult.Text;
-                lblResult.Text = Math.Sqrt(double.Parse(lblResult.Text)).ToString();
+                if (btnSQRT.Text == "√")
+                {
+                    lblPast.Text = "√" + lblResult.Text;
+                    lblResult.Text = Math.Sqrt(double.Parse(lblResult.Text)).ToString();
+                }
+                else
+                {
+                    lblPast.Text = "∛" + lblResult.Text;
+                    lblResult.Text = Math.Pow(double.Parse(lblResult.Text), 1.0 / 3.0).ToString();
+                }
             }
-            else
-            {
-                lblPast.Text = "∛" + lblResult.Text;
-                lblResult.Text = Math.Pow(double.Parse(lblResult.Text), 1.0/3.0).ToString();
-            }
+            else lblResult.Text = "No mnemonic there";
         }
 
         // ввод с клавиатуры
@@ -354,22 +364,16 @@ namespace Calculator
                 if (!lblResult.Text.Contains('-') && !lblResult.Text.Contains(','))
                 {
                     int tmpF = int.Parse(lblResult.Text);
-                    if (tmpF == 0 && tmpF < 20) lblResult.Text = "1";
-                    else
+                    if (firstOperand == 0)
                     {
-                        if (tmpF > 0 && tmpF < 20)
-                        {
-                            if (firstOperand == 0)
-                            {
-                                lblResult.Text = calcFactorial(tmpF).ToString();
-                                lblPast.Text = (tmpF + "! =").ToString();
-                            }
-                            else lblResult.Text = calcFactorial(tmpF).ToString();
-                        }
-                        else lblResult.Text = "too much";
+                        lblResult.Text = calcFactorial(tmpF);
+                        lblPast.Text = (tmpF + "! =").ToString();
                     }
+                    else
+                        lblResult.Text = calcFactorial(tmpF);
                 }
-                else lblResult.Text = "null";
+                else
+                    lblResult.Text = "Not exists";
             }
             else // 1/x
             {

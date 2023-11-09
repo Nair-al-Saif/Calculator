@@ -306,7 +306,7 @@
             // 
             this.lblResult.AutoEllipsis = true;
             this.lblResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblResult.Font = new System.Drawing.Font("Consolas", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblResult.Font = new System.Drawing.Font("Consolas", 18F);
             this.lblResult.Location = new System.Drawing.Point(8, 39);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(286, 130);
@@ -430,7 +430,7 @@
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Калькулятор";
+            this.Text = "Calculator 1.0.4";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
