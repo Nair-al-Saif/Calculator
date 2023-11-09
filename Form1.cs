@@ -255,20 +255,24 @@ namespace Calculator
         // корень квадратный
         private void btnSQRT_Click(object sender, EventArgs e)
         {
-            if (double.Parse(lblResult.Text) >= 0)
+            double tmp;
+            if (double.TryParse(lblResult.Text, out tmp) && tmp >= 0)
             {
                 if (btnSQRT.Text == "√")
                 {
-                    lblPast.Text = "√" + lblResult.Text;
-                    lblResult.Text = Math.Sqrt(double.Parse(lblResult.Text)).ToString();
+                    lblPast.Text = "√" + tmp.ToString();
+                    lblResult.Text = Math.Sqrt(tmp).ToString();
                 }
                 else
                 {
-                    lblPast.Text = "∛" + lblResult.Text;
-                    lblResult.Text = Math.Pow(double.Parse(lblResult.Text), 1.0 / 3.0).ToString();
+                    lblPast.Text = "∛" + tmp.ToString();
+                    lblResult.Text = Math.Pow(tmp, 1.0 / 3.0).ToString();
                 }
             }
-            else lblResult.Text = "No mnemonic there";
+            else if (tmp < 0)
+                lblResult.Text = "No mnemonic there";
+            else
+                lblResult.Text = "Only numbers";
         }
 
         // ввод с клавиатуры
