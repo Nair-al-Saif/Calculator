@@ -73,6 +73,7 @@
             this.btnNumZero.Text = "0";
             this.btnNumZero.UseVisualStyleBackColor = true;
             this.btnNumZero.Click += new System.EventHandler(this.btnNumZero_Click);
+            this.btnNumZero.Enter += new System.EventHandler(this.btnActivated);
             // 
             // btnNumOne
             // 
@@ -85,6 +86,7 @@
             this.btnNumOne.Text = "1";
             this.btnNumOne.UseVisualStyleBackColor = true;
             this.btnNumOne.Click += new System.EventHandler(this.btnNumOne_Click);
+            this.btnNumOne.Enter += new System.EventHandler(this.btnActivated);
             // 
             // btnNumTwo
             // 
@@ -97,6 +99,7 @@
             this.btnNumTwo.Text = "2";
             this.btnNumTwo.UseVisualStyleBackColor = true;
             this.btnNumTwo.Click += new System.EventHandler(this.btnNumTwo_Click);
+            this.btnNumTwo.Enter += new System.EventHandler(this.btnActivated);
             // 
             // btnNumThree
             // 
@@ -109,6 +112,7 @@
             this.btnNumThree.Text = "3";
             this.btnNumThree.UseVisualStyleBackColor = true;
             this.btnNumThree.Click += new System.EventHandler(this.btnNumThree_Click);
+            this.btnNumThree.Enter += new System.EventHandler(this.btnActivated);
             // 
             // btnNumSix
             // 
@@ -121,6 +125,7 @@
             this.btnNumSix.Text = "6";
             this.btnNumSix.UseVisualStyleBackColor = true;
             this.btnNumSix.Click += new System.EventHandler(this.btnNumSix_Click);
+            this.btnNumSix.Enter += new System.EventHandler(this.btnActivated);
             // 
             // btnNumFive
             // 
@@ -133,6 +138,7 @@
             this.btnNumFive.Text = "5";
             this.btnNumFive.UseVisualStyleBackColor = true;
             this.btnNumFive.Click += new System.EventHandler(this.btnNumFive_Click);
+            this.btnNumFive.Enter += new System.EventHandler(this.btnActivated);
             // 
             // btnNumFour
             // 
@@ -145,6 +151,7 @@
             this.btnNumFour.Text = "4";
             this.btnNumFour.UseVisualStyleBackColor = true;
             this.btnNumFour.Click += new System.EventHandler(this.btnNumFour_Click);
+            this.btnNumFour.Enter += new System.EventHandler(this.btnActivated);
             // 
             // btnNumNine
             // 
@@ -157,6 +164,7 @@
             this.btnNumNine.Text = "9";
             this.btnNumNine.UseVisualStyleBackColor = true;
             this.btnNumNine.Click += new System.EventHandler(this.btnNumNine_Click);
+            this.btnNumNine.Enter += new System.EventHandler(this.btnActivated);
             // 
             // btnNumEight
             // 
@@ -169,6 +177,7 @@
             this.btnNumEight.Text = "8";
             this.btnNumEight.UseVisualStyleBackColor = true;
             this.btnNumEight.Click += new System.EventHandler(this.btnNumEight_Click);
+            this.btnNumEight.Enter += new System.EventHandler(this.btnActivated);
             // 
             // btnNumSeven
             // 
@@ -181,6 +190,7 @@
             this.btnNumSeven.Text = "7";
             this.btnNumSeven.UseVisualStyleBackColor = true;
             this.btnNumSeven.Click += new System.EventHandler(this.btnNumSeven_Click);
+            this.btnNumSeven.Enter += new System.EventHandler(this.btnActivated);
             // 
             // btnNumComma
             // 
@@ -193,6 +203,7 @@
             this.btnNumComma.Text = ".";
             this.btnNumComma.UseVisualStyleBackColor = true;
             this.btnNumComma.Click += new System.EventHandler(this.btnNumComma_Click);
+            this.btnNumComma.Enter += new System.EventHandler(this.btnActivated);
             // 
             // btnNumPM
             // 
@@ -205,6 +216,7 @@
             this.btnNumPM.Text = "±";
             this.btnNumPM.UseVisualStyleBackColor = true;
             this.btnNumPM.Click += new System.EventHandler(this.btnNumPM_Click);
+            this.btnNumPM.Enter += new System.EventHandler(this.btnActivated);
             // 
             // btnEquals
             // 
@@ -217,6 +229,7 @@
             this.btnEquals.Text = "=";
             this.btnEquals.UseVisualStyleBackColor = true;
             this.btnEquals.Click += new System.EventHandler(this.btnEquals_Click);
+            this.btnEquals.Enter += new System.EventHandler(this.btnActivated);
             // 
             // btnMult
             // 
@@ -229,6 +242,7 @@
             this.btnMult.Text = "*";
             this.btnMult.UseVisualStyleBackColor = true;
             this.btnMult.Click += new System.EventHandler(this.btnMult_Click);
+            this.btnMult.Enter += new System.EventHandler(this.btnActivated);
             // 
             // btnMinus
             // 
@@ -241,6 +255,7 @@
             this.btnMinus.Text = "-";
             this.btnMinus.UseVisualStyleBackColor = true;
             this.btnMinus.Click += new System.EventHandler(this.btnMinus_Click);
+            this.btnMinus.Enter += new System.EventHandler(this.btnActivated);
             // 
             // btnPlus
             // 
@@ -253,6 +268,7 @@
             this.btnPlus.Text = "+";
             this.btnPlus.UseVisualStyleBackColor = true;
             this.btnPlus.Click += new System.EventHandler(this.btnPlus_Click);
+            this.btnPlus.Enter += new System.EventHandler(this.btnActivated);
             // 
             // btnDiv
             // 
@@ -265,6 +281,7 @@
             this.btnDiv.Text = "/";
             this.btnDiv.UseVisualStyleBackColor = true;
             this.btnDiv.Click += new System.EventHandler(this.btnDiv_Click);
+            this.btnDiv.Enter += new System.EventHandler(this.btnActivated);
             // 
             // btnDeleteLast
             // 
@@ -277,6 +294,7 @@
             this.btnDeleteLast.Text = "<-";
             this.btnDeleteLast.UseVisualStyleBackColor = true;
             this.btnDeleteLast.Click += new System.EventHandler(this.btnDeleteLast_Click);
+            this.btnDeleteLast.Enter += new System.EventHandler(this.btnActivated);
             // 
             // btnClear
             // 
@@ -289,6 +307,7 @@
             this.btnClear.Text = "C";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            this.btnClear.Enter += new System.EventHandler(this.btnActivated);
             // 
             // btnClearResult
             // 
@@ -301,6 +320,7 @@
             this.btnClearResult.Text = "CE";
             this.btnClearResult.UseVisualStyleBackColor = true;
             this.btnClearResult.Click += new System.EventHandler(this.btnClearResult_Click);
+            this.btnClearResult.Enter += new System.EventHandler(this.btnActivated);
             // 
             // lblResult
             // 
@@ -325,6 +345,7 @@
             this.btnReverseFact.Text = "1/x";
             this.btnReverseFact.UseVisualStyleBackColor = true;
             this.btnReverseFact.Click += new System.EventHandler(this.btnReverseFact_Click);
+            this.btnReverseFact.Enter += new System.EventHandler(this.btnActivated);
             // 
             // btnSQRX
             // 
@@ -337,6 +358,7 @@
             this.btnSQRX.Text = "x^2";
             this.btnSQRX.UseVisualStyleBackColor = true;
             this.btnSQRX.Click += new System.EventHandler(this.btnSQR_Click);
+            this.btnSQRX.Enter += new System.EventHandler(this.btnActivated);
             // 
             // btnSQRT
             // 
@@ -349,6 +371,7 @@
             this.btnSQRT.Text = "√";
             this.btnSQRT.UseVisualStyleBackColor = true;
             this.btnSQRT.Click += new System.EventHandler(this.btnSQRT_Click);
+            this.btnSQRT.Enter += new System.EventHandler(this.btnActivated);
             // 
             // btnSecond
             // 
@@ -361,6 +384,7 @@
             this.btnSecond.Text = "2rnd";
             this.btnSecond.UseVisualStyleBackColor = true;
             this.btnSecond.Click += new System.EventHandler(this.btnSecond_Click);
+            this.btnSecond.Enter += new System.EventHandler(this.btnActivated);
             // 
             // lblPast
             // 
